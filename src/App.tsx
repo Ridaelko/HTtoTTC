@@ -28,14 +28,32 @@ const App = () => {
           }}
         />
         <label htmlFor="taxe">Entrez la valeur de la taxe appliquée</label>
-        <input
+        {/* <input
           id="taxe"
           type="number"
           value={taxe}
           onChange={(e) => {
             setTaxe(parseFloat(e.target.value));
           }}
-        />
+        /> */}
+
+        <select
+          name="taxe"
+          id="taxe"
+          required={true}
+          onChange={(e) => {
+            setTaxe(e.target.value);
+          }}
+          defaultValue=""
+        >
+          <option value="" disabled={true}>
+            Choississez votre taxe
+          </option>
+          <option value={taxe}>2.2</option>
+          <option value={taxe}>5.5</option>
+          <option value={taxe}>10</option>
+          <option value={20}>20</option>
+        </select>
         <button type="submit">Calculez votre prix total</button>
 
         <label htmlFor="ht">HT vers TTC</label>
