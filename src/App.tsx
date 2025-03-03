@@ -28,14 +28,6 @@ const App = () => {
           }}
         />
         <label htmlFor="taxe">Entrez la valeur de la taxe appliquée</label>
-        {/* <input
-          id="taxe"
-          type="number"
-          value={taxe}
-          onChange={(e) => {
-            setTaxe(parseFloat(e.target.value));
-          }}
-        /> */}
 
         <select
           name="taxe"
