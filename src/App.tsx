@@ -57,6 +57,7 @@ const App = () => {
           value={value}
           onChange={(e) => {
             setValue(parseFloat(e.target.value));
+            setSubmitted(false);
           }}
         />
         <label htmlFor="taxe">Entrez la valeur de la taxe appliquée</label>
