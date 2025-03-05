@@ -49,7 +49,7 @@ const App = () => {
         </h1>
 
         <label htmlFor="value">
-          Entrez votre prix {selected === "ht" ? "HT" : "TTC"}
+          Entrez votre prix {selected === "ht" ? "HT" : "TTC"}{" "}
         </label>
         <input
           id="value"
