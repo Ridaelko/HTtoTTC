@@ -77,7 +77,7 @@ const App = () => {
           <option value={20}>20</option>
         </select>
         <button type="submit">
-          Calculez votre prix {selected === "ht" ? "TTC" : "HT"}{" "}
+          Calculez votre prix {selected === "ht" ? "TTC" : "HT"}
         </button>
       </form>
     </>
