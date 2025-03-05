@@ -9,9 +9,11 @@ const App = () => {
   const [value, setValue] = useState<number>(0);
   const [taxe, setTaxe] = useState<number>(0);
   const [selected, setSelected] = useState<string>("ht");
+  const [submitted, setSubmitted] = useState<boolean>(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitted(true);
   };
 
   return (
@@ -81,14 +83,16 @@ const App = () => {
         </button>
       </form>
 
-      <p>
-        Votre prix {selected === "ht" ? "TTC" : "HT"} est{" "}
-        {selected === "ht" ? (
-          <HtTtc value={value} taxe={taxe} />
-        ) : (
-          <TtcHt value={value} taxe={taxe} />
-        )}{" "}
-      </p>
+      {submitted && (
+        <p>
+          Votre prix {selected === "ht" ? "TTC" : "HT"} est{" "}
+          {selected === "ht" ? (
+            <HtTtc value={value} taxe={taxe} />
+          ) : (
+            <TtcHt value={value} taxe={taxe} />
+          )}{" "}
+        </p>
+      )}
     </>
   );
 };
