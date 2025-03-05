@@ -19,10 +19,11 @@ const App = () => {
   return (
     <>
       <div className="bg-[#C3BAC7] min-h-screen flex justify-center items-center">
-        <div className="bg-[#D9D9D9] w-[732px] h-[auto] rounded-4xl p-6">
+        <div className="bg-[#D9D9D9] w-[732px] min-h-[663px] rounded-4xl p-10">
           <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
-            <div className="flex justify-evenly">
+            <div className="flex justify-evenly  border-[#58B57F]  ">
               <input
+                className="w-6 h-6 outline-2 outline-offset-2  outline-[#58B57F] "
                 id="ht"
                 type="radio"
                 name="mode"
