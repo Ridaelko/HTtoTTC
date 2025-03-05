@@ -3,11 +3,11 @@ import "./App.css";
 import { useState } from "react";
 
 import HtTtc from "./assets/components/HtTtc";
-// import TtcHt from "./assets/components/TtcHt";
+import TtcHt from "./assets/components/TtcHt";
 
 const App = () => {
-  const [value, setValue] = useState<number>(0);
-  const [taxe, setTaxe] = useState<number>(0);
+  const [value, setValue] = useState<number>();
+  const [taxe, setTaxe] = useState<number>();
   // const [selected, setSelected] = useState();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -53,8 +53,6 @@ const App = () => {
         <label htmlFor="ttc">TTC vers HT</label>
         <input id="ttc" type="radio" name="mode" value="ttc" />
       </form>
-
-      <HtTtc value={value} taxe={taxe} />
     </>
   );
 };
