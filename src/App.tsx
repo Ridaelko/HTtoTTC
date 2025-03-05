@@ -35,6 +35,7 @@ const App = () => {
               />
 
               <input
+                className="w-6 h-6 border-2 border-[#58B57F] border-double rouded-full "
                 id="ttc"
                 type="radio"
                 name="mode"
@@ -100,6 +101,7 @@ const App = () => {
               ) : (
                 <TtcHt value={value} taxe={taxe} />
               )}{" "}
+              €
             </p>
           )}
         </div>
