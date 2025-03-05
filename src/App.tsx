@@ -6,8 +6,8 @@ import HtTtc from "./assets/components/HtTtc";
 import TtcHt from "./assets/components/TtcHt";
 
 const App = () => {
-  const [value, setValue] = useState<number>();
-  const [taxe, setTaxe] = useState<number>();
+  const [value, setValue] = useState<number>(0);
+  const [taxe, setTaxe] = useState<number>(0);
   const [selected, setSelected] = useState<string>("ht");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -80,6 +80,15 @@ const App = () => {
           Calculez votre prix {selected === "ht" ? "TTC" : "HT"}
         </button>
       </form>
+
+      <p>
+        Votre prix {selected === "ht" ? "TTC" : "HT"} est{" "}
+        {selected === "ht" ? (
+          <HtTtc value={value} taxe={taxe} />
+        ) : (
+          <TtcHt value={value} taxe={taxe} />
+        )}{" "}
+      </p>
     </>
   );
 };
