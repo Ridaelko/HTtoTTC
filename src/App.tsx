@@ -34,7 +34,7 @@ const App = () => {
           id="taxe"
           required={true}
           onChange={(e) => {
-            setTaxe(e.target.value);
+            setTaxe(parseFloat(e.target.value));
           }}
           defaultValue=""
         >
