@@ -18,32 +18,37 @@ const App = () => {
 
   return (
     <>
-      <div className="bg-[#C3BAC7] h-dvh ">
-        <div className="bg-[#D9D9D9] w-170 h-160 rounded-4xl flex justify-center items-center ">
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="ht">HT vers TTC</label>
-            <input
-              id="ht"
-              type="radio"
-              name="mode"
-              value="ht"
-              checked={selected === "ht"}
-              onChange={(e) => {
-                setSelected(e.target.value);
-              }}
-            />
+      <div className="bg-[#C3BAC7] min-h-screen flex justify-center items-center ">
+        <div className="bg-[#D9D9D9] w-[732px] h-[663px] rounded-4xl flex justify-center">
+          <form onSubmit={handleSubmit} className="flex flex-col">
+            <div className="flex justify-evenly  ">
+              <input
+                id="ht"
+                type="radio"
+                name="mode"
+                value="ht"
+                checked={selected === "ht"}
+                onChange={(e) => {
+                  setSelected(e.target.value);
+                }}
+              />
 
-            <label htmlFor="ttc">TTC vers HT</label>
-            <input
-              id="ttc"
-              type="radio"
-              name="mode"
-              value="ttc"
-              checked={selected === "ttc"}
-              onChange={(e) => {
-                setSelected(e.target.value);
-              }}
-            />
+              <input
+                id="ttc"
+                type="radio"
+                name="mode"
+                value="ttc"
+                checked={selected === "ttc"}
+                onChange={(e) => {
+                  setSelected(e.target.value);
+                }}
+              />
+            </div>
+
+            <div className="flex justify-evenly text-[#365E31]">
+              <label htmlFor="ht">HT vers TTC</label>
+              <label htmlFor="ttc">TTC vers HT</label>
+            </div>
 
             <h1>
               Calculez votre prix {selected === "ht" ? "TTC" : "HT"} à partir du
@@ -76,10 +81,10 @@ const App = () => {
               <option value="" disabled={true}>
                 Choississez votre taxe
               </option>
-              <option value={taxe}>2.2</option>
-              <option value={taxe}>5.5</option>
-              <option value={taxe}>10</option>
-              <option value={20}>20</option>
+              <option value="2.2">2.2</option>
+              <option value="5.5">5.5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
             </select>
             <button type="submit">
               Calculez votre prix {selected === "ht" ? "TTC" : "HT"}
