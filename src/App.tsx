@@ -16,7 +16,6 @@ const App = () => {
 
   return (
     <>
-      <h1>Calculez votre prix TTC</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="ht">HT vers TTC</label>
         <input
@@ -42,7 +41,14 @@ const App = () => {
           }}
         />
 
-        <label htmlFor="value">Entrez votre prix HT</label>
+        <h1>
+          Calculez votre prix {selected === "ht" ? "TTC" : "HT"} à partir du
+          prix {selected === "ht" ? "HT" : "TTC"}
+        </h1>
+
+        <label htmlFor="value">
+          Entrez votre prix {selected === "ht" ? "HT" : "TTC"}
+        </label>
         <input
           id="value"
           type="number"
