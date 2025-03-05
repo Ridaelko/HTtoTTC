@@ -8,7 +8,7 @@ import TtcHt from "./assets/components/TtcHt";
 const App = () => {
   const [value, setValue] = useState<number>();
   const [taxe, setTaxe] = useState<number>();
-  const [selected, setSelected] = useState("ht");
+  const [selected, setSelected] = useState<string>("ht");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
