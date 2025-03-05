@@ -18,10 +18,10 @@ const App = () => {
 
   return (
     <>
-      <div className="bg-[#C3BAC7] min-h-screen flex justify-center items-center ">
-        <div className="bg-[#D9D9D9] w-[732px] h-[663px] rounded-4xl flex justify-center">
-          <form onSubmit={handleSubmit} className="flex flex-col">
-            <div className="flex justify-evenly  ">
+      <div className="bg-[#C3BAC7] min-h-screen flex justify-center items-center">
+        <div className="bg-[#D9D9D9] w-[732px] h-[auto] rounded-4xl p-6">
+          <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+            <div className="flex justify-evenly">
               <input
                 id="ht"
                 type="radio"
