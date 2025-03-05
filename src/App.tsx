@@ -18,6 +18,11 @@ const App = () => {
     <>
       <h1>Calculez votre prix TTC</h1>
       <form onSubmit={handleSubmit}>
+        <label htmlFor="ht">HT vers TTC</label>
+        <input id="ht" type="radio" name="mode" value="ht" />
+        <label htmlFor="ttc">TTC vers HT</label>
+        <input id="ttc" type="radio" name="mode" value="ttc" />
+
         <label htmlFor="value">Entrez votre prix HT</label>
         <input
           id="value"
@@ -47,11 +52,6 @@ const App = () => {
           <option value={20}>20</option>
         </select>
         <button type="submit">Calculez votre prix total</button>
-
-        <label htmlFor="ht">HT vers TTC</label>
-        <input id="ht" type="radio" name="mode" value="ht" />
-        <label htmlFor="ttc">TTC vers HT</label>
-        <input id="ttc" type="radio" name="mode" value="ttc" />
       </form>
     </>
   );
