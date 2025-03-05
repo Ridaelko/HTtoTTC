@@ -8,7 +8,7 @@ import TtcHt from "./assets/components/TtcHt";
 const App = () => {
   const [value, setValue] = useState<number>();
   const [taxe, setTaxe] = useState<number>();
-  // const [selected, setSelected] = useState();
+  const [selected, setSelected] = useState("ht");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,9 +19,28 @@ const App = () => {
       <h1>Calculez votre prix TTC</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="ht">HT vers TTC</label>
-        <input id="ht" type="radio" name="mode" value="ht" />
+        <input
+          id="ht"
+          type="radio"
+          name="mode"
+          value="ht"
+          checked={selected === "ht"}
+          onChange={(e) => {
+            setSelected(e.target.value);
+          }}
+        />
+
         <label htmlFor="ttc">TTC vers HT</label>
-        <input id="ttc" type="radio" name="mode" value="ttc" />
+        <input
+          id="ttc"
+          type="radio"
+          name="mode"
+          value="ttc"
+          checked={selected === "ttc"}
+          onChange={(e) => {
+            setSelected(e.target.value);
+          }}
+        />
 
         <label htmlFor="value">Entrez votre prix HT</label>
         <input
