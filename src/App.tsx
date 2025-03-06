@@ -18,8 +18,8 @@ const App = () => {
 
   return (
     <>
-      <div className="bg-[#C3BAC7] min-h-screen flex justify-center items-center">
-        <div className="bg-[#D9D9D9] w-[732px] min-h-[663px] rounded-4xl p-10">
+      <div className="bg-[#C3BAC7] min-h-screen flex justify-center items-center ">
+        <div className="bg-[#D9D9D9] w-[700px] min-h-[550px] rounded-4xl p-10">
           <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
             <div className="flex justify-evenly  border-[#58B57F]  ">
               <input
@@ -52,7 +52,7 @@ const App = () => {
               <label htmlFor="ttc">TTC vers HT</label>
             </div>
 
-            <h1>
+            <h1 className="flex justify-center text-[#365E31] text-2xl text-extrabold uppercase tracking-wide">
               Calculez votre prix {selected === "ht" ? "TTC" : "HT"} à partir du
               prix {selected === "ht" ? "HT" : "TTC"}
             </h1>
