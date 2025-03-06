@@ -61,7 +61,7 @@ const App = () => {
               Entrez votre prix {selected === "ht" ? "HT" : "TTC"}{" "}
             </label>
             <input
-              className="border-2 border-[#58B57F] rounded-xl h-10 text-lg pl-3 "
+              className="border-3 border-[#58B57F] rounded-xl h-10 text-lg pl-3 "
               id="value"
               type="number"
               value={value}
