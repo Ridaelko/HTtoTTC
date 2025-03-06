@@ -57,7 +57,7 @@ const App = () => {
               prix {selected === "ht" ? "HT" : "TTC"}
             </h1>
 
-            <label htmlFor="value" className="uppercase text-[#365E31] ">
+            <label htmlFor="value" className="uppercase text-[#365E31]">
               Entrez votre prix {selected === "ht" ? "HT" : "TTC"}{" "}
             </label>
             <input
@@ -70,9 +70,12 @@ const App = () => {
                 setSubmitted(false);
               }}
             />
-            <label htmlFor="taxe">Entrez la valeur de la taxe appliquée</label>
+            <label htmlFor="taxe" className="uppercase text-[#365E31]">
+              Entrez la valeur de la taxe appliquée
+            </label>
 
             <select
+              className="border-3 border-[#58B57F] rounded-xl h-10 appearance-none"
               name="taxe"
               id="taxe"
               required={true}
