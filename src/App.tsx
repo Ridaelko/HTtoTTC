@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <>
-      <div className="bg-[#C3BAC7] max-h-screen flex justify-center items-center overflow-hidden">
+      <div className="bg-[#C3BAC7] min-h-screen flex justify-center items-center overflow-hidden">
         <div className="bg-[#CDC9CF] w-[700px] min-h-[550px] rounded-4xl py-15 px-25">
           <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
             <div className="flex justify-evenly">
