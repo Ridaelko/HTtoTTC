@@ -19,7 +19,7 @@ const App = () => {
   return (
     <>
       <div className="bg-[#C3BAC7] min-h-screen flex justify-center items-center ">
-        <div className="bg-[#CDC9CF] w-[700px] min-h-[550px] rounded-4xl p-20">
+        <div className="bg-[#CDC9CF] w-[700px] min-h-[550px] rounded-4xl py-18 px-25">
           <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
             <div className="flex justify-evenly  border-[#58B57F]  ">
               <input
@@ -75,7 +75,7 @@ const App = () => {
             </label>
 
             <select
-              className="border-3 border-[#58B57F] rounded-xl h-10 appearance-none"
+              className="border-3 border-[#58B57F] rounded-xl h-10 text-lg pl-3 appearance-none"
               name="taxe"
               id="taxe"
               required={true}
@@ -92,7 +92,10 @@ const App = () => {
               <option value="10">10</option>
               <option value="20">20</option>
             </select>
-            <button type="submit">
+            <button
+              type="submit"
+              className="bg-[#58B57F] rounded-xl h-10 text-white uppercase text-lg mt-3"
+            >
               Calculez votre prix {selected === "ht" ? "TTC" : "HT"}
             </button>
           </form>
