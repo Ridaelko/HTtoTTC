@@ -19,7 +19,7 @@ const App = () => {
   return (
     <>
       <div className="bg-[#C3BAC7] min-h-screen flex justify-center items-center ">
-        <div className="bg-[#CDC9CF] w-[700px] min-h-[550px] rounded-4xl py-18 px-25">
+        <div className="bg-[#CDC9CF] w-[700px] min-h-[550px] rounded-4xl py-15 px-25">
           <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
             <div className="flex justify-evenly  border-[#58B57F]  ">
               <input
@@ -101,7 +101,7 @@ const App = () => {
           </form>
 
           {submitted && (
-            <p>
+            <p className="mt-6 text-[#365E31] text-lg uppercase ">
               Votre prix {selected === "ht" ? "TTC" : "HT"} est{" "}
               {selected === "ht" ? (
                 <HtTtc value={value} taxe={taxe} />
