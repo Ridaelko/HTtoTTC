@@ -21,9 +21,9 @@ const App = () => {
       <div className="bg-[#C3BAC7] min-h-screen flex justify-center items-center overflow-hidden">
         <div className="bg-[#CDC9CF] w-[700px] min-h-[550px] rounded-4xl py-15 px-25">
           <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
-            <div className="flex justify-evenly  border-[#58B57F]  ">
+            <div className="flex justify-evenly">
               <input
-                className="w-6 h-6 outline-2 outline-offset-2  outline-[#58B57F] "
+                className="w-6 h-6 outline-2 outline-offset-2  outline-[#58B525] "
                 id="ht"
                 type="radio"
                 name="mode"
@@ -35,7 +35,7 @@ const App = () => {
               />
 
               <input
-                className="w-6 h-6 border-2 border-[#58B57F] border-double rouded-full "
+                className="w-6 h-6 border border-red "
                 id="ttc"
                 type="radio"
                 name="mode"
@@ -61,7 +61,7 @@ const App = () => {
               Entrez votre prix {selected === "ht" ? "HT" : "TTC"}{" "}
             </label>
             <input
-              className="border-3 border-[#58B57F] rounded-xl h-10 text-lg pl-3 "
+              className="border-3 border-[#118525] rounded-xl h-10 text-lg pl-3 "
               id="value"
               type="number"
               value={value}
@@ -75,7 +75,7 @@ const App = () => {
             </label>
 
             <select
-              className="border-3 border-[#58B57F] rounded-xl h-10 text-lg pl-3 appearance-none"
+              className="border-3 border-[#118525] rounded-xl h-10 text-lg pl-3 appearance-none"
               name="taxe"
               id="taxe"
               required={true}
@@ -94,7 +94,7 @@ const App = () => {
             </select>
             <button
               type="submit"
-              className="bg-[#58B57F] rounded-xl h-10 text-white uppercase text-lg mt-3"
+              className="bg-[#118525] hover:bg-[#365E31] rounded-xl h-10 text-white uppercase text-lg mt-3"
             >
               Calculez votre prix {selected === "ht" ? "TTC" : "HT"}
             </button>
