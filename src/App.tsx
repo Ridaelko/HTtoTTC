@@ -52,7 +52,7 @@ const App = () => {
               <label htmlFor="ttc">TTC vers HT</label>
             </div>
 
-            <h1 className="flex justify-center text-[#365E31] text-xl text-extrabold uppercase tracking-wide">
+            <h1 className="flex justify-center text-[#365E31] text-xl text-bold uppercase tracking-wide">
               Calculez votre prix {selected === "ht" ? "TTC" : "HT"} à partir du
               prix {selected === "ht" ? "HT" : "TTC"}
             </h1>
