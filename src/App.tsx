@@ -21,9 +21,9 @@ const App = () => {
       <div className="bg-[#C3BAC7] w-screen h-screen flex justify-center items-center ">
         <div className="bg-[#CDC9CF] w-[700px] min-h-[550px] rounded-4xl py-15 px-25">
           <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
-            <div className="flex justify-evenly">
+            <div className="flex justify-around">
               <input
-                className="w-6 h-6 outline-2 outline-offset-2  outline-[#58B525] "
+                className="w-6 h-6 border-green-800 accent-green-800"
                 id="ht"
                 type="radio"
                 name="mode"
@@ -35,7 +35,7 @@ const App = () => {
               />
 
               <input
-                className="w-6 h-6 border border-red "
+                className="w-6 h-6 border-green-800 accent-green-800 "
                 id="ttc"
                 type="radio"
                 name="mode"
@@ -47,9 +47,9 @@ const App = () => {
               />
             </div>
 
-            <div className="flex justify-evenly text-[#365E31]">
-              <label htmlFor="ht">HT vers TTC</label>
-              <label htmlFor="ttc">TTC vers HT</label>
+            <div className="flex justify-evenly text-[#365E31] uppercase text-sm mb-6">
+              <p>Calculez prix TTC</p>
+              <p>Calculez prix HT</p>
             </div>
 
             <h1 className="flex justify-center text-[#365E31] text-xl text-bold uppercase tracking-wide">
@@ -61,7 +61,7 @@ const App = () => {
               Entrez votre prix {selected === "ht" ? "HT" : "TTC"}{" "}
             </label>
             <input
-              className="border-3 border-[#118525] rounded-xl h-10 text-lg pl-3 "
+              className="border-3 border-[#118525] rounded-xl h-10 text-lg pl-3 focus:outline-none focus:ring focus:ring-purple-500 "
               id="value"
               type="number"
               value={value}
@@ -75,7 +75,7 @@ const App = () => {
             </label>
 
             <select
-              className="border-3 border-[#118525] rounded-xl h-10 text-lg pl-3 appearance-none"
+              className="border-3 border-[#118525] rounded-xl h-10 text-lg pl-3 appearance-none focus:outline-none focus:ring focus:ring-purple-500 "
               name="taxe"
               id="taxe"
               required={true}
