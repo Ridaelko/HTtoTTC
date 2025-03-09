@@ -52,7 +52,7 @@ const App = () => {
               <p>Calculez prix HT</p>
             </div>
 
-            <h1 className="flex justify-center text-[#365E31] text-xl text-bold uppercase tracking-wide">
+            <h1 className="flex justify-center text-[#365E31] text-xl font-bold uppercase tracking-wide">
               Calculez votre prix {selected === "ht" ? "TTC" : "HT"} à partir du
               prix {selected === "ht" ? "HT" : "TTC"}
             </h1>
