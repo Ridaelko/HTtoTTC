@@ -61,7 +61,7 @@ const App = () => {
               Entrez votre prix {selected === "ht" ? "HT" : "TTC"}{" "}
             </label>
             <input
-              className="border-3 border-[#118525] rounded-xl h-10 text-lg pl-3 focus:outline-none focus:ring focus:ring-purple-500 "
+              className="border-3 border-[#118525] rounded-xl h-10 text-lg pl-3 focus:outline-2 focus:outline-offset-2 focus:outline-purple-500"
               id="value"
               type="number"
               value={value}
@@ -75,7 +75,7 @@ const App = () => {
             </label>
 
             <select
-              className="border-3 border-[#118525] rounded-xl h-10 text-lg pl-3 appearance-none focus:outline-none focus:ring focus:ring-purple-500 "
+              className="border-3 border-[#118525] rounded-xl h-10 text-lg pl-3 appearance-none focus:outline-2 focus:outline-offset-2 focus:outline-purple-500"
               name="taxe"
               id="taxe"
               required={true}
